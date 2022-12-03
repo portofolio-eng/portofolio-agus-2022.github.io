@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">  
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" 
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="task.css">
+    <title>Website-Solas-Mipa-Siki</title>
+</head>
+<body>
+            
+    <nav>
+        <div class="logo">
+            <h4 class="text-logo">Agus task</h4>
+        </div>
+
+        <ul class="satu">
+            <li><a class="barmenu" href="index.html">Home</a></li>
+            <li><a class="barmenu" href="about.html">About me</a></li>
+            <li><a class="barmenu" href="task-video.html">My task</a></li>
+            <li><a class="barmenu" href="https://smanbalimandara.sch.id/">My School</a></li>
+        </ul>
+
+        <div class="humberger">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+
+    <!-- video responsive -->
+    <link rel="stylesheet" href="task.css">
+</head>
+<body> 
+
+<div class="border">
+    <div class="heading">
+        <h3 class="text">My Englis Project </h3>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container-satu">
+        <div class="video">
+            <video src="video/scene 1.mp4" controls></video>
+            <h3 class="title">01. Giving Suggestion (scene 1) <a class="sumber" href="https://www.instagram.com/p/Cgd8P_oLjTs/?utm_source=ig_web_copy_link">link</a> </h3>
+        </div>
+    </div>
+    <div class="container-dua">
+        <div class="video">
+            <video src="video/scene 2.mp4" controls></video>
+            <h3 class="title">02. Expression of Giving an Opinion (scene 2)<a class="sumber" href="https://www.instagram.com/p/Cgx6SJ4PTwQ/?utm_source=ig_web_copy_link">link</a> </h3>
+        </div>
+    </div>
+    <div class="container-tiga">
+        <div class="video">
+            <video src="video/my voice.mp4"controls></video>
+            <h3 class="title">03. Expression of Invitation (scene 3)<a class="sumber" href="https://www.instagram.com/reel/CgLu-DwgvIo/?utm_source=ig_web_copy_link"> link</a> </h3>
+        </div>
+    </div>
+    <div class="container-empat">
+        <div class="video">
+            <video src="video/modal verb.mp4"controls></video>
+            <h3 class="title">04. Project 5 (A Presentation about Modal Verbs) </h3>
+        </div>
+    </div>
+    <div class="container-lima">
+        <div class="video">
+            <video src="video/VID-20220920-WA0040.mp4"controls></video>
+            <h3 class="title">05. Project 6 Making Short Movie Episode 3 (Scene 4)</h3>
+        </div>
+    </div>
+</div>
+
+    <!-- DESKRIPSI PROJECT -->
+<div class="descripsi">
+    <div class="button">
+        <h3> Description Website</h3>
+    </div> 
+</div>
+<div class="isi">
+    <div class="align">
+        <h4>======================</h4>
+        <h4>This website was made by own hard work, even though it uses google translate, I hope you can get some learning from my website, that's all from me, thank you.</h4>
+        <h4>======================</h4>
+    </div>
+</div>
+
+<script>
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelector('.main-video .title');
+
+listVideo.forEach(video =>{
+    video.onclick = () =>{
+        listVideo.forEach(vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        if(video.classList.add('active')){
+            let src = video.children[0].getAttribute('src');
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+        };
+    };
+});
+</script>
+</body>
+</html>
